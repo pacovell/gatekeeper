@@ -1,0 +1,54 @@
+Gatekeeper
+==========
+
+Gatekeeper provides a basic authentication and authorization system. 
+
+Authentication-related capabilities:
+* create account (create_users privilege)
+* login, logout
+* forgot password one-time-link email + reset facility
+* show user account (self, show_other_users privilege)
+* edit user account (self, edit_other_users privilege)
+
+Authorization-related capabilities:
+* user model with has_privilege?(privilege) method
+* Built-in roles: 
+  "admin" - has all privileges (not configurable)
+  "anonymous" - has create_users privilege by default (configurable)
+* Built-in privileges:
+  "edit_other_users" - allows access to edit, update other users, including passwords
+
+Deferring to light-weight + configurable over feature-rich, Gatekeeper does NOT provide
+role or privilege management capability at the web level -- instead, learn how it works
+and create management devices to suit the needs of the particular web application you're
+building.
+
+Models, Controllers, and Views
+* Models are provided -- since this is the backbone of most web applications, we assume 
+  you will not be retrofitting existing apps and conflicts won't be an issue
+* Controllers -- the Users controller is fixed at /users - this should be configurable
+  in the future.
+* Views -- basic views are provided but can be overridden by placing your own views under
+  the views/users/ directory.
+
+---
+TODO
+
+Functionality - Login/Authorization
+
+- Improved handling of phishing -- add Captcha after multiple attempts, etc
+- Review security best practices on restful authentication Wiki
+
++ Facebook Connect link-in [requires configuration options first]
++ OpenID link-in [requires configuration options first]
+
+Functionality - Plugin
+- Large scale configuration capability
+  - Email configuration options
+  - Views customizations (how to do?)
+  - Any preferences capability for configuration?
+  - Take facebooker-like approach for basic options?
+
+---
+
+Copyright (c) 2008 Paul Covell, released under the MIT license

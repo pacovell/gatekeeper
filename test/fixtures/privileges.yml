@@ -1,0 +1,9 @@
+edit_other_users:
+    name: edit other users
+    tag: edit_other_users
+    description: Allows this user to edit other users
+    
+edit_others_articles:
+    name: edit others' articles
+    tag: edit_others_articles
+    description: Allows this user to edit other users' articles

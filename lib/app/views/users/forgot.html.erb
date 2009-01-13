@@ -1,0 +1,9 @@
+<h1>Forgot Password</h1>
+<p>Enter your email or username, and we will send an email with instructions for resetting your password.</p>
+
+<% form_tag do %>
+<table>
+<tr><th>Email or username:</th><td><%= text_field_tag :username_or_email %></td></tr>
+<tr><th colspan='2'><%= submit_tag "Submit" %></th></tr>
+</table>
+<% end %>

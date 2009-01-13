@@ -1,0 +1,9 @@
+admin:
+    name: Administrator
+    tag: admin
+    description: A site administrator
+
+editor:
+    name: Editor
+    tag: editor
+    description: A site editor
